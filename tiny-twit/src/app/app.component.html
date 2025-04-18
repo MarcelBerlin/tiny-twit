@@ -1,13 +1,24 @@
 <header class="navbar">
   <nav>
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Feed</a>
-    <a routerLink="/new" routerLinkActive="active">Neuer Tweet</a>
-    <a routerLink="/profile" routerLinkActive="active">Profil</a>
-    <button (click)="toggleDarkMode()">
-      {{ isDarkMode ? '🌞 Hell' : '🌙 Dunkel' }}
-    </button>
+      <div class="logo-area">
+      <img src="/TinyTwit_logo.png" alt="TinyTwit Logo" class="logo"> 
+      <!-- <span class="brand-name">TinyTwit</span> -->
+    </div>
+
+
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Feed</a>
+      <a routerLink="/new" routerLinkActive="active">Neuer Tweet</a>
+      <a routerLink="/profile" routerLinkActive="active">Profil</a>
+      <button (click)="toggleDarkMode()">
+        {{ isDarkMode ? '🌞 Hell' : '🌙 Dunkel' }}
+      </button>
+    </div>
+
   </nav>
 </header>
+
+
 
 <div [ngClass]="{ 'dark-mode': isDarkMode }">
   <router-outlet></router-outlet>

@@ -28,13 +28,13 @@
     z-index: 100;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
-    padding: 1rem;
+    padding: 0.25rem 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     font-family: 'Segoe UI', sans-serif;
   
     nav {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       gap: 1rem;
     }
@@ -57,4 +57,46 @@
       cursor: pointer;
     }
   }
+  
+    
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  
+      .logo {
+        height: 85px;
+        width: auto;
+      }
+  
+      .brand-name {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #007bff;
+      }
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+  
+      a {
+        text-decoration: none;
+        color: #333;
+  
+        &.active {
+          text-decoration: underline;
+          color: #007bff;
+        }
+      }
+  
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+  
   
