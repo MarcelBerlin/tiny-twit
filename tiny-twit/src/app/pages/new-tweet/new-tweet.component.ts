@@ -2,12 +2,24 @@ import { CommonModule } from '@angular/common'; // Basis für jede Angular-Kompo
 import { Component } from '@angular/core'; // Für das Formular (Reactive Forms)
 import { FormControl, ReactiveFormsModule } from '@angular/forms'; // Für ngIf, ngFor, etc.
 import { Router } from '@angular/router'; // Ermöglicht Navigation zu anderen Routen
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-new-tweet', // HTML-Tag, unter dem die Komponente verwendet werden kann
   imports: [CommonModule, ReactiveFormsModule], // Wichtige Angular-Features aktivieren
   templateUrl: './new-tweet.component.html', // Styling-Datei
-  styleUrl: './new-tweet.component.scss' // HTML-Datei für das Template
+  styleUrl: './new-tweet.component.scss', // HTML-Datei für das Template
+  animations: [
+    trigger('fadeSlide', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(-10px)' }),
+        animate('400ms ease-out', style({ opacity: 1, transform: 'translateY(0)' })),
+      ]),
+      transition(':leave', [
+        animate('400ms ease-in', style({ opacity: 0, transform: 'translateY(10px)' }))
+      ])
+    ])
+  ],
 })
 export class NewTweetComponent {
 
