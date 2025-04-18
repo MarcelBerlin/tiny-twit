@@ -1,0 +1,13 @@
+<div class="new-tweet-container">
+    <input [formControl]="usernameControl" placeholder="Benutzername"><br>
+    <textarea [formControl]="usercontentControl" placeholder="Was denkst Du gerade?" maxlength="280"></textarea>
+    <p style="font-family: 'Segoe UI', sans-serif;">
+        Zeichen: {{ usercontentControl.value?.length || 0 }}/280
+      </p>
+      
+      <p *ngIf="(usercontentControl.value?.length || 0) > 280" style="color: red;">
+        ⚠️ Du hast das Limit überschritten!
+      </p>
+    <button (click)="postTweet()" [disabled]="!usercontentControl.value || !usercontentControl.value.trim()">Posten
+    </button>
+</div>

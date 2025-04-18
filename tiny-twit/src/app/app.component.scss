@@ -1,0 +1,60 @@
+.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+  
+    input,
+    textarea {
+      background-color: #1e1e1e;
+      color: #f1f1f1;
+      border-color: #444;
+    }
+  
+    .tweet-card {
+      background-color: #1c1c1c;
+      border-color: #333;
+    }
+  
+    button {
+      background-color: #444;
+  
+      &:hover {
+        background-color: #666;
+      }
+    }
+  }
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-family: 'Segoe UI', sans-serif;
+  
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+  
+      &.active {
+        color: #007bff;
+        text-decoration: underline;
+      }
+    }
+  
+    button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  

@@ -1,0 +1,11 @@
+<h2>Feed</h2>
+
+<div *ngFor="let tweet of tweets; let i = index" [@fadeSlide] class="tweet-card">
+    <div class="tweet-header">{{ tweet.username }}</div>
+    <div class="tweet-meta">{{ tweet.date | date:'short' }}</div>
+    <div class="tweet.content">{{ tweet.content }}</div>
+
+    <button (click)="likeTweet(tweet)" [disabled]="tweet.liked">❤️ {{ tweet.likes }}</button>
+    <button (click)="deleteTweet(i)">🗑️ Löschen</button>    
+</div>
+

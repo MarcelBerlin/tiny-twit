@@ -1,0 +1,76 @@
+:host {
+    display: block;
+    max-width: 600px;
+    margin: 2rem auto;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0 1rem;
+}
+
+form,
+textarea,
+input,
+button {
+    font-family: inherit;
+}
+
+textarea,
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-right: 0.5rem;
+
+
+    &:disabled {
+        background-color: #aaa;
+        cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: #0056b3;
+    }
+}
+
+.tweet-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+}
+
+.tweet-header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.tweet-meta {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.tweet-content {
+    margin-bottom: 0.75rem;
+}
+
+.character-count {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}

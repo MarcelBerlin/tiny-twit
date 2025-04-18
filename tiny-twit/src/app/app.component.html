@@ -1,0 +1,14 @@
+<header class="navbar">
+  <nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Feed</a>
+    <a routerLink="/new" routerLinkActive="active">Neuer Tweet</a>
+    <a routerLink="/profile" routerLinkActive="active">Profil</a>
+    <button (click)="toggleDarkMode()">
+      {{ isDarkMode ? '🌞 Hell' : '🌙 Dunkel' }}
+    </button>
+  </nav>
+</header>
+
+<div [ngClass]="{ 'dark-mode': isDarkMode }">
+  <router-outlet></router-outlet>
+</div>
